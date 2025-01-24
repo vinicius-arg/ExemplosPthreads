@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
    printf("Hello da thread principal!\n");
    
    pthread_create(&t1, NULL, Hello, (void*) t1_param);  
-   pthread_join(t1, NULL); 
+   pthread_join(t1, NULL);
 
    return 0;
 }  /* main */
@@ -23,6 +23,6 @@ void *Hello(void* param) {
    long my_id = (long) param;  /* Use long in case of 64-bit system */ 
 
    printf("Hello da thread %ld\n", my_id);
+   
    return NULL;
 }  /* Hello */
-
